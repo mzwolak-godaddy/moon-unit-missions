@@ -25,7 +25,7 @@ entitlement_id               string     COMMENT '@PrimaryKey Unique identifier f
 ,entitlement_addon_id        bigint     COMMENT 'CES addon identifier for add-on product associated with the entitlement.'
 ,entitlement_addon_flag      boolean    COMMENT 'Indicates whether this entitlement is an add-on product (true/false).'
 ,exclude_reason_desc         string     COMMENT 'Reason to exclude this row from standard analyses. Null for valid entitlements. Common non-null values: add-on product, Internal Shopper, Acquisition Elimination.'
-,source_system_name          string     COMMENT 'Name of the source ecommerce system that originated this entitlement (e.g. legacy e-comm, nes_shim').'
+,source_system_name          string     COMMENT 'Name of the source ecommerce system that originated this entitlement (e.g. legacy e-comm, nes_shim).'
 ,source_table_name           string     COMMENT 'Name of the CES source database table that provided this entitlement record.'
 ,entitlement_mst_year        int        COMMENT 'Year (Mountain Standard Time) of the entitlement record. ETL partition key; matches partition_entitlement_mst_year.'
 ,entitlement_mst_month       int        COMMENT 'Month (Mountain Standard Time) of the entitlement record. ETL partition key; matches partition_entitlement_mst_month.'
