@@ -11,7 +11,7 @@ CREATE TABLE fact_bill_line_vw (
     refund_flag boolean COMMENT 'Indicates whether this bill line is a refund transaction (true/false). Derived from the presence of R in bill_id.',
     chargeback_flag boolean COMMENT 'Indicates whether this bill line is a chargeback transaction (true/false). Derived from the presence of C in bill_id.',
     item_tracking_code string COMMENT 'Item tracking code (itc) for the billed item. Identifies where on the GoDaddy site the customer was when the product was added to cart, or which team/process was responsible for adding it.',
-    department_id int COMMENT 'Identifier of the business department responsible for this billing line item. Defined by accounting\finance.',
+    department_id int COMMENT 'Identifier of the business department responsible for this billing line item. Defined by accounting and finance.',
     accounting_company_id int COMMENT 'Accounting company identifier that represents the GoDaddy legal entity (subsidiary) used to process the transaction for tax calculation and financial reporting purposes.',
     accounting_deferred_flag boolean COMMENT 'Indicates whether revenue recognition is deferred for this line item (true/false).',
     pf_id int COMMENT '@ForeignKey(dim_product) Product Family identifier for the billed product.',
